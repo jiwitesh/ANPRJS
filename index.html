@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>  -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/2.0.1/tf.js"></script> -->
+<!-- Load the coco-ssd model. -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+<body>
+  <h1>TensorFlow.js Object Detection</h1>
+  <select id='base_model'>
+    <option value="lite_mobilenet_v2">SSD Lite Mobilenet V2</option>
+    <option value="mobilenet_v1">SSD Mobilenet v1</option>
+    <option value="mobilenet_v2">SSD Mobilenet v2</option>
+  </select>
+  <button type="button" id="run">Run</button>
+  <button type="button" id="toggle">Toggle Image</button>
+  <div>
+    <img id="image" />
+    <canvas id="canvas" width="600" height="600"></canvas>
+  </div>
+</body>
+<script type="module" src="./index2.js"></script>
+<!-- <script type="module" src="./PSM.js"></script> -->
+
+</html>
